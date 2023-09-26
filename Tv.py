@@ -11,3 +11,7 @@ class Tv(Tecnologia):
     def get_tamanio(self):
         return self.__tamanio
     
+
+    #sobreescribir 'update' imprimirCaratecristicas()
+
+    

@@ -31,7 +31,11 @@ class Tecnologia:
         return self.__marca
     
     #tecnologias(marca:str,voltaje:int,precio:float,eficiencia:str)
-
+    def imprimirCaracteristicas():
+        pass
 
     #crear una calculadora de descuento.
+    def calculadoraDescuento():
+        pass
     
+
