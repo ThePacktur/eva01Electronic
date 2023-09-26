@@ -12,6 +12,8 @@ class Tv(Tecnologia):
         return self.__tamanio
     
 
-    #sobreescribir 'update' imprimirCaratecristicas()
+    #sobreescribir 'update' calculadora de descento public
 
-    
+    #sobreescribir 'update' imprimirCaratecristicas() public
+
+

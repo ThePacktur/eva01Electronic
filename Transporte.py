@@ -9,3 +9,9 @@ class Transporte:
         return self.__costeDespacho_base
     
     #crear calculadora de despacho en float.
+
+    #definir costos con despacho
+
+    #declarar metodos
+
+    #
