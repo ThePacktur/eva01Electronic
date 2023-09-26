@@ -1,0 +1,11 @@
+class Transporte:
+    def __init__(self,costeDespacho_base:int):
+        self.__costeDespacho_base = costeDespacho_base
+
+    def set_costeDespacho_base(self,costeDespacho_base:int):
+        self.__costeDespacho_base = costeDespacho_base
+
+    def get_costeDespacho_base(self):
+        return self.__costeDespacho_base
+    
+    #crear calculadora de despacho en float.
