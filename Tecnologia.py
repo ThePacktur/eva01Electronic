@@ -38,4 +38,5 @@ class Tecnologia:
     def calculadoraDescuento():
         pass
     
-
+    def __str__(self):
+        pass

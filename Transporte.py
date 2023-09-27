@@ -14,4 +14,5 @@ class Transporte:
 
     #declarar metodos
 
-    #
+    def __str__(self):
+        pass
