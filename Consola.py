@@ -18,3 +18,9 @@ class Consola(Tecnologia):
     def get_version(self):
         return self.__version
     
+    def __str__(self):
+        imp = super().__str__()
+        imp += f"Nombre consola: {self.nombreConsola}"
+        imp += f"Version: {self.version}"
+        return imp
+    

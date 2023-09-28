@@ -39,4 +39,8 @@ class Tecnologia:
         pass
     
     def __str__(self):
-        pass
+        imp = f"Voltaje: {self.voltaje}"
+        imp += f"Precio: {self.precio}"
+        imp += f"Eficiencia: {self.eficiencia}"
+        imp += f"Marca: {self.Marca}"
+        return imp

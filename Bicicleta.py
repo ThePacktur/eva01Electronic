@@ -31,4 +31,9 @@ class Bicicleta(Transporte):
 
     def get_marca(self):
         return self.__marca
-    
+    def __str__(self):
+        imp = super().__str__()
+        imp += f"aro: {self.aro}"
+        imp += f"peso: {self.peso}"
+        imp += f"marca: {self.marca}"
+        return imp

@@ -8,8 +8,8 @@ from Scooter import Scooter
 
 
 def menu():
-    opcion: "y"
-    while opcion!='y':
+    opcion: "n"
+    while opcion!='n':
         print("Bienvenido")
         print("-------------")
         print("puedes realizar las siguentes opciones: ")

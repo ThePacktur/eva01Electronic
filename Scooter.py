@@ -19,7 +19,7 @@ class Scooter(Tecnologia,Transporte):
     def set_velocidad(self,velocidad:float):
         self.__velocidad =velocidad
 
-    def get_vevelocidad(self):
+    def get_velocidad(self):
         return self.__velocidad
     
     
@@ -30,3 +30,9 @@ class Scooter(Tecnologia,Transporte):
     def get_peso(self):
         return self.__peso
     
+    def __str__(self):
+        imp = super().__str__()
+        imp += super().__str__()
+        imp += f"Aro: {self.aro}"
+        imp += f"Velocidad: {self.velocidad}"
+        imp += f"Peso: {self.peso}"

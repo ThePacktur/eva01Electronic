@@ -16,4 +16,8 @@ class Tv(Tecnologia):
 
     #sobreescribir 'update' imprimirCaratecristicas() public
 
+    def __str__(self):
+        imp = super().__str__()
+        imp += f"Tamanio: {self.tamanio}"
+        return imp
 

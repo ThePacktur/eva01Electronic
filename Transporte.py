@@ -15,4 +15,5 @@ class Transporte:
     #declarar metodos
 
     def __str__(self):
-        pass
+        imp = f"coste base del despacho: {self.costeDespacho_base}" 
+        return imp
