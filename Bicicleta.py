@@ -31,7 +31,13 @@ class Bicicleta(Transporte):
 
     def get_marca(self):
         return self.__marca
-    
+    #crear calculadora de despacho en float.
+   
+
+    #definir costos con despacho
+
+    #declarar metodos
+
     
     def __str__(self):
         imp = super().__str__()

@@ -22,7 +22,7 @@ class Consola(Tecnologia):
         descuento_eficiencia = super().calculadoraDescuento()
         descuento_total = descuento_eficiencia
         if self.version == "Lite":
-            descuento_total += descuento_eficiencia * 0.05
+            descuento_total += super().get_precio() * 0.05
         return descuento_total
 
     def imprimirCaracteristicas(self):
