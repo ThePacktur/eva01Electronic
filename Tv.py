@@ -13,8 +13,14 @@ class Tv(Tecnologia):
     
 
     #sobreescribir 'update' calculadora de descento public
-
+    def calculadoraDescuento(self):
+        descuento_eficiencia =  super().calculadoraDescuento()
+        descuento_total = descuento_eficiencia * 0.95 
+        return descuento_total
     #sobreescribir 'update' imprimirCaratecristicas() public
+    def imprimirCaracteristicas(self):
+        super().imprimirCaracteristicas()
+        print("Tamanio: ",self.tamanio)
 
     def __str__(self):
         imp = super().__str__()

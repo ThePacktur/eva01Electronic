@@ -30,14 +30,25 @@ class Tecnologia:
     def get_marca(self):
         return self.__marca
     
-    #tecnologias(marca:str,voltaje:int,precio:float,eficiencia:str)
-    def imprimirCaracteristicas():
-        pass
-
+  
     #crear una calculadora de descuento.
-    def calculadoraDescuento():
-        pass
-    
+    def calculadoraDescuento(self):
+      if self.eficincia in ['A','B']:
+          return self.precio * 0.5
+      elif self.eficiencia in ['C', 'D']:
+          return self.precio * 0.7
+      elif self.eficiencia in ['E','F']:
+          return self.precio * 0.9
+      else: 
+          return self.precio
+
+    #tecnologias(marca:str,voltaje:int,precio:float,eficiencia:str)
+    def imprimirCaracteristicas(self):
+        print("Marca: ", self.marca)
+        print("voltaje: ", self.voltaje)
+        print("Eficiencia: ", self.eficiencia)
+        print("Precio: ", self.precio)        
+
     def __str__(self):
         imp = f"Voltaje: {self.voltaje}"
         imp += f"Precio: {self.precio}"

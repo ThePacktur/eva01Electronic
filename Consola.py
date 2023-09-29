@@ -18,6 +18,17 @@ class Consola(Tecnologia):
     def get_version(self):
         return self.__version
     
+    def calculadoraDescuento(self):
+        descuento_eficiencia = super().calculadoraDescuento()
+        descuento_total = descuento_eficiencia
+        if self.version == "Lite":
+            descuento_total += descuento_eficiencia * 0.05
+        return descuento_total
+
+    def imprimirCaracteristicas(self):
+        super().imprimirCaracteristicas()
+        print("Nombre de la Consola: ",self.nombreConsola)
+        print("Version: ", self.version)
     def __str__(self):
         imp = super().__str__()
         imp += f"Nombre consola: {self.nombreConsola}"
