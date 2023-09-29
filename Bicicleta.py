@@ -32,11 +32,12 @@ class Bicicleta(Transporte):
     def get_marca(self):
         return self.__marca
     #crear calculadora de despacho en float.
+    def calcularDespacho(self):
+        precio_despocho = super().get_costeDespacho_base()
+        peso_total += precio_despocho + self.precio  * 400
+        return peso_total
+
    
-
-    #definir costos con despacho
-
-    #declarar metodos
 
     
     def __str__(self):

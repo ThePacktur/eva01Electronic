@@ -35,18 +35,19 @@ def menu():
             print("Consola registrada exitosamente.")
 
         elif opcion == 3:
-            nombre = input("Ingrese el nombre del Scooter: ")
-            precio = float(input("Ingrese el precio del Scooter: "))
-            modelo = input("Ingrese el modelo del Scooter: ")
-            scooter = Scooter(nombre, precio, modelo)
+            aro= float(input("Ingrese el aro del Scooter: "))
+            velocidad = int(input("Ingrese la velocidad del Scooter: "))
+            peso = float(input("Ingrese el peso del Scooter: "))
+            scooter = Scooter(aro, velocidad, peso)
             productos.append(scooter)
             print("Scooter registrado exitosamente.")
 
         elif opcion == 4:
-            nombre = input("Ingrese el nombre de la Bicicleta: ")
-            precio = float(input("Ingrese el precio de la Bicicleta: "))
-            tipo = input("Ingrese el tipo de la Bicicleta: ")
-            bicicleta = Bicicleta(nombre, precio, tipo)
+            aro = float(input("Ingrese el aro de la Bicicleta: "))
+            peso = float(input("Ingrese el peso de la Bicicleta: "))
+            precio = input("Ingrese el precio de la Bicicleta: ")
+            marca = input("Ingrese la marca de la bicicleta: ")
+            bicicleta = Bicicleta(aro, peso, precio,marca)
             productos.append(bicicleta)
             print("Bicicleta registrada exitosamente.")
 
