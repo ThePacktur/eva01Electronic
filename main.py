@@ -19,18 +19,23 @@ def menu():
         opcion = int(input("Ingrese una opción: "))
 
         if opcion == 1:
-            nombre = input("Ingrese el nombre del Tv: ")
+            voltaje = int(input("Ingrese el voltaje del Tv (volt): "))
             precio = float(input("Ingrese el precio del Tv: "))
-            marca = input("Ingrese la marca del Tv: ")
-            tv = Tv(nombre, precio, marca)
+            eficiencia = input("Seleccione la eficiencia de la Tv (A,B,C,D,E or F): ")
+            marca = input("Ingrese la marca de la televicion: ")
+            tamanio = float(input("Ingrese el tamanio de la televicion: "))
+            tv = Tv(voltaje,precio,eficiencia, marca, tamanio)
             productos.append(tv)
             print("Tv registrado exitosamente.")
 
         elif opcion == 2:
-            nombre = input("Ingrese el nombre de la Consola: ")
-            precio = float(input("Ingrese el precio de la Consola: "))
-            plataforma = input("Ingrese la plataforma de la Consola: ")
-            consola = Consola(nombre, precio, plataforma)
+            nombreConsola = input("Ingrese el nombre de la Consola: ")
+            voltaje = int(input("Ingrese el precio de la Consola: "))
+            precio = float(input("Ingrese la plataforma de la Consola: "))
+            eficiencia = input("Seleccione la eficiencia de la Consola (A,B,C,D,E or F):")
+            marca = input("Ingrese la marca de la Consola: ")
+            version = input("Ingrese si la consola es Lite, slim or normal: ")
+            consola = Consola(nombreConsola,voltaje ,precio,marca, version)
             productos.append(consola)
             print("Consola registrada exitosamente.")
 

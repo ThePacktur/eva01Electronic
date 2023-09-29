@@ -25,13 +25,13 @@ class Consola(Tecnologia):
             descuento_total += super().get_precio() * 0.05
         return descuento_total
 
-    def imprimirCaracteristicas(self):
-        super().imprimirCaracteristicas()
-        print("Nombre de la Consola: ",self.nombreConsola)
-        print("Version: ", self.version)
+    #def imprimirCaracteristicas(self):
+     #   super().imprimirCaracteristicas()
+     #   print("Nombre de la Consola: ",self.__nombreConsola)
+     #   print("Version: ", self.__version)
     def __str__(self):
         imp = super().__str__()
-        imp += f"Nombre consola: {self.nombreConsola}"
-        imp += f"Version: {self.version}"
+        imp += f"\nNombre consola: {self.__nombreConsola}"
+        imp += f"\nVersion: {self.__version}"
         return imp
     

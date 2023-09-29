@@ -10,5 +10,5 @@ class Transporte:
     
     
     def __str__(self):
-        imp = f"coste base del despacho: {self.costeDespacho_base}" 
+        imp = f"\ncoste base del despacho: {self.__costeDespacho_base}" 
         return imp

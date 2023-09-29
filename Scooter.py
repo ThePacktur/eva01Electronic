@@ -30,9 +30,9 @@ class Scooter(Tecnologia,Transporte):
     def get_peso(self):
         return self.__peso
     
-    def __str__(self):
-        imp = super().__str__()
-        imp += super().__str__()
-        imp += f"Aro: {self.aro}"
-        imp += f"Velocidad: {self.velocidad}"
-        imp += f"Peso: {self.peso}"
+    #def __str__(self):
+     #   imp = super().__str__()
+     #   imp += super().__str__()
+     #   imp += f"\nAro: {self.__aro}"
+     #   imp += f"\nVelocidad: {self.__velocidad}"
+     #   imp += f"\nPeso: {self.__peso}"

@@ -18,12 +18,12 @@ class Tv(Tecnologia):
         descuento_total = descuento_eficiencia * 0.95 
         return descuento_total
     #sobreescribir 'update' imprimirCaratecristicas() public
-    def imprimirCaracteristicas(self):
-        super().imprimirCaracteristicas()
-        print("Tamanio: ",self.tamanio)
+    #def imprimirCaracteristicas(self):
+    #    super().imprimirCaracteristicas()
+    #    print("Tamanio: ",self.tamanio)
 
     def __str__(self):
         imp = super().__str__()
-        imp += f"Tamanio: {self.tamanio}"
+        imp += f"\nTamanio: {self.__tamanio}"
         return imp
 

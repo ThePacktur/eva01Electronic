@@ -42,7 +42,7 @@ class Bicicleta(Transporte):
     
     def __str__(self):
         imp = super().__str__()
-        imp += f"aro: {self.aro}"
-        imp += f"peso: {self.peso}"
-        imp += f"marca: {self.marca}"
+        imp += f"\naro: {self.__aro}"
+        imp += f"\npeso: {self.__peso}"
+        imp += f"\nmarca: {self.__marca}"
         return imp

@@ -44,14 +44,14 @@ class Tecnologia:
 
     #tecnologias(marca:str,voltaje:int,precio:float,eficiencia:str)
     def imprimirCaracteristicas(self):
-        print("Marca: ", self.marca)
-        print("voltaje: ", self.voltaje)
-        print("Eficiencia: ", self.eficiencia)
-        print("Precio: ", self.precio)        
+        print("Marca: ", self.__marca)
+        print("voltaje: ", self.__voltaje)
+        print("Eficiencia: ", self.__eficiencia)
+        print("Precio: ", self.__precio)        
 
     def __str__(self):
-        imp = f"Voltaje: {self.voltaje}"
-        imp += f"Precio: {self.precio}"
-        imp += f"Eficiencia: {self.eficiencia}"
-        imp += f"Marca: {self.Marca}"
+        imp = f"Voltaje: {self.__voltaje}"
+        imp += f"\nPrecio: {self.__precio}"
+        imp += f"\nEficiencia: {self.__eficiencia}"
+        imp += f"\nMarca: {self.__marca}"
         return imp
