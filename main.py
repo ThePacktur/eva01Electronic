@@ -46,7 +46,7 @@ def menu():
             eficiencia = input("Seleccione la eficiencia del scooter (A,B,C,D,E or F):")
             marca = input("Ingrese la marca del scooter: ")
             aro= float(input("Ingrese el aro del Scooter: "))
-            velocidad = int(input("Ingrese la velocidad del Scooter: "))
+            velocidad = int(input("Ingrese la velocidad del Scooter: "))  #error typeError: bicicleta.__init__() missing 2 requered positional argument: 'precio' and 'marca'
             peso = float(input("Ingrese el peso del Scooter: "))
             scooter = Scooter(voltaje,precio,eficiencia,aro, velocidad, peso)
             productos.append(scooter)
@@ -63,8 +63,8 @@ def menu():
 
         elif opcion == 5:
             total = 0
-            for producto in productos:
-                total += producto.cotizar()
+            for producto in productos:  #error for producto in productor
+                total += producto.cotizar() #attributError: 'TV' object has no attribute 'Cotizar'
             print("El total a cotizar es:", total)
 
         elif opcion == 6:
@@ -74,4 +74,4 @@ def menu():
         else:
             print("Opción inválida. Por favor, ingrese una opción válida.")
 
-menu()
+menu() #Traceback (most recent call last)
