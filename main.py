@@ -29,21 +29,26 @@ def menu():
             print("Tv registrado exitosamente.")
 
         elif opcion == 2:
-            nombreConsola = input("Ingrese el nombre de la Consola: ")
-            voltaje = int(input("Ingrese el precio de la Consola: "))
-            precio = float(input("Ingrese la plataforma de la Consola: "))
+           
+            voltaje = int(input("Ingrese el voltaje de la Consola: "))
+            precio = float(input("Ingrese el precio de la Consola: "))
             eficiencia = input("Seleccione la eficiencia de la Consola (A,B,C,D,E or F):")
             marca = input("Ingrese la marca de la Consola: ")
-            version = input("Ingrese si la consola es Lite, slim or normal: ")
-            consola = Consola(nombreConsola,voltaje ,precio,marca, version)
+            nombreConsola = input("Ingrese el nombre de la Consola: ")
+            version = input("Ingrese si la consola es Lite  or normal: ")
+            consola = Consola(voltaje ,precio,marca,nombreConsola ,version)
             productos.append(consola)
             print("Consola registrada exitosamente.")
 
         elif opcion == 3:
+            voltaje = int(input("Ingrese el voltaje del scooter: "))
+            precio = float(input("Ingrese el precio del scooter: "))
+            eficiencia = input("Seleccione la eficiencia del scooter (A,B,C,D,E or F):")
+            marca = input("Ingrese la marca del scooter: ")
             aro= float(input("Ingrese el aro del Scooter: "))
             velocidad = int(input("Ingrese la velocidad del Scooter: "))
             peso = float(input("Ingrese el peso del Scooter: "))
-            scooter = Scooter(aro, velocidad, peso)
+            scooter = Scooter(voltaje,precio,eficiencia,aro, velocidad, peso)
             productos.append(scooter)
             print("Scooter registrado exitosamente.")
 
@@ -63,7 +68,7 @@ def menu():
             print("El total a cotizar es:", total)
 
         elif opcion == 6:
-            print("Gracias por usar el programa.")
+            print("Gracias por elegir nuestro programa.")
             break
 
         else:
