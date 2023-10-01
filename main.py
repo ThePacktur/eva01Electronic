@@ -14,19 +14,21 @@ def menu():
         print("2. Registrar Consola")
         print("3. Registrar Scooter")
         print("4. Registrar Bicicleta")
-        print("5. Cotizar productos")
-        print("6. Salir")
+        #print("5. Cotizar productos")
+        print("5. Salir")
         opcion = int(input("Ingrese una opción: "))
 
         if opcion == 1:
-            voltaje = int(input("Ingrese el voltaje del Tv (volt): "))
-            precio = float(input("Ingrese el precio del Tv: "))
-            eficiencia = input("Seleccione la eficiencia de la Tv (A,B,C,D,E or F): ")
             marca = input("Ingrese la marca de la televicion: ")
+            voltaje = int(input("Ingrese el voltaje del Tv (volt): "))
+            eficiencia = input("Seleccione la eficiencia de la Tv (A,B,C,D,E or F): ")
+            precio = float(input("Ingrese el precio del Tv: "))
             tamanio = float(input("Ingrese el tamanio de la televicion: "))
-            tv = Tv(voltaje,precio,eficiencia, marca, tamanio)
+            tv = Tv(marca, voltaje, eficiencia, precio, tamanio)
             productos.append(tv)
             print("Tv registrado exitosamente.")
+            print("\nCotizacion Tvs: ")
+            print(tv.cotizar())
 
         elif opcion == 2:
            
@@ -39,6 +41,8 @@ def menu():
             consola = Consola(voltaje ,precio,marca,nombreConsola ,version)
             productos.append(consola)
             print("Consola registrada exitosamente.")
+            print("\nCotizacion Consolas: ")
+            print(consola.cotizar())
 
         elif opcion == 3:
             voltaje = int(input("Ingrese el voltaje del scooter: "))
@@ -51,6 +55,8 @@ def menu():
             scooter = Scooter(voltaje,precio,eficiencia,aro, velocidad, peso)
             productos.append(scooter)
             print("Scooter registrado exitosamente.")
+            print("\nCotizacion Scooter: ")
+            print(scooter.cotizar())
 
         elif opcion == 4:
             aro = float(input("Ingrese el aro de la Bicicleta: "))
@@ -60,14 +66,16 @@ def menu():
             bicicleta = Bicicleta(aro, peso, precio,marca)
             productos.append(bicicleta)
             print("Bicicleta registrada exitosamente.")
+            print("\nCotizacion Bicicletas: ")
+            print(bicicleta.cotizar())
+
+       # elif opcion == 5:
+       #     total = 0
+       #     for producto in productos:  #error for producto in productor
+       #         total += producto.cotizar() #attributError: 'TV' object has no attribute 'Cotizar'
+       #     print("El total a cotizar es:", total)
 
         elif opcion == 5:
-            total = 0
-            for producto in productos:  #error for producto in productor
-                total += producto.cotizar() #attributError: 'TV' object has no attribute 'Cotizar'
-            print("El total a cotizar es:", total)
-
-        elif opcion == 6:
             print("Gracias por elegir nuestro programa.")
             break
 
@@ -75,3 +83,5 @@ def menu():
             print("Opción inválida. Por favor, ingrese una opción válida.")
 
 menu() #Traceback (most recent call last)
+
+ 
