@@ -32,15 +32,13 @@ def menu():
             print(tv.cotizar())
 
         elif opcion == 2:
-
-            voltaje = int(input("Ingrese el voltaje de la Consola: "))
-            precio = float(input("Ingrese el precio de la Consola: "))
-            eficiencia = input(
-                "Seleccione la eficiencia de la Consola (A,B,C,D,E or F):")
             marca = input("Ingrese la marca de la Consola: ")
+            voltaje = int(input("Ingrese el voltaje de la Consola: "))
+            eficiencia = input("Seleccione la eficiencia de la Consola (A,B,C,D,E or F):")
+            precio = float(input("Ingrese el precio de la Consola: "))     
             nombreConsola = input("Ingrese el nombre de la Consola: ")
             version = input("Ingrese si la consola es Lite  or normal: ")
-            consola = Consola(voltaje, precio, marca, nombreConsola, version)
+            consola = Consola(marca,voltaje, eficiencia, precio, nombreConsola, version)
             productos.append(consola)
             print("Consola registrada exitosamente.")
             print("\nCotizacion Consolas: ")
