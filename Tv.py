@@ -11,6 +11,8 @@ class Tv(Tecnologia):
     def get_tamanio(self):
         return self.__tamanio
     
+    def cotizar(self):
+     return  super().get_precio
 
     #sobreescribir 'update' calculadora de descento public
     def calculadoraDescuento(self):

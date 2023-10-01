@@ -1,8 +1,8 @@
 from Tecnologia import Tecnologia
 
 class Consola(Tecnologia):
-    def __init__(self, voltaje: int, precio: float, eficiencia: str, marca: str,nombreConsola:str,version:str):
-        super().__init__(voltaje, precio, eficiencia, marca)
+    def __init__(self, marca: str, voltaje: int, eficiencia: str, precio: float,nombreConsola:str,version:str):
+        super().__init__(marca, voltaje, eficiencia, precio)
         self.__nombreConsola = nombreConsola
         self.__version = version
 
@@ -12,7 +12,7 @@ class Consola(Tecnologia):
     def get_nombreConsola(self):
         return self.__nombreConsola
     
-    def set_version(self,version):
+    def set_version(self,version:str):
         self.__version = version
 
     def get_version(self):
@@ -25,6 +25,8 @@ class Consola(Tecnologia):
             descuento_total += super().get_precio() * 0.05
         return descuento_total
 
+    def cotizar(self):
+     return  super().get_precio
     #def imprimirCaracteristicas(self):
      #   super().imprimirCaracteristicas()
      #   print("Nombre de la Consola: ",self.__nombreConsola)

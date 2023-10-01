@@ -3,7 +3,6 @@ class Tecnologia:
     def __init__(self,marca:str,voltaje:int,eficiencia:str,precio:float):
         self.__marca = marca
         self.__voltaje = voltaje
-        
         self.__eficiencia = eficiencia
         self.__precio = precio
 
@@ -45,7 +44,7 @@ class Tecnologia:
 
     def cotizar(self):
         descuento = self.calculadoraDescuento
-        precio_descuento = self.get_precio * (1 - descuento)
+        precio_descuento = self.__precio * (1 - descuento)
         return precio_descuento
 
 

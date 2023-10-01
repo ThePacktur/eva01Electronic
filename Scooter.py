@@ -37,7 +37,7 @@ class Scooter(Transporte):
         descuento = self.calcular_descuento()
         precio_descuento = self.precio * (1 - descuento)
         precio_total = precio_descuento + costo_despacho
-        return f"Marca: {self.marca}" f"\nVoltaje: {self.voltaje}"f"\nEficiencia: {self.eficiencia}"f"\nPrecio: ${self.precio}"f"\nPeso: {self.peso} kg"f"\nDescuento: {descuento * 100}%"f"\nCosto de Despacho: ${costo_despacho}"f"\nPrecio Total: ${precio_total}"
+        return precio_total
 
     #def __str__(self):
      #   imp = super().__str__()
