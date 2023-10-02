@@ -33,33 +33,30 @@ class Tecnologia:
   
     #crear una calculadora de descuento.
     def calculadoraDescuento(self):
-      if self.eficincia in ['A','B']:
-          return self.precio * 0.5
-      elif self.eficiencia in ['C', 'D']:
-          return self.precio * 0.7
-      elif self.eficiencia in ['E','F']:
-          return self.precio * 0.9
+      eficiencia = self.__eficiencia.upper()
+      if eficiencia in ['A','B']:
+          return self.__precio * 0.5
+      elif eficiencia in ['C', 'D']:
+          return self.__precio * 0.7
+      elif eficiencia in ['E','F']:
+          return self.__precio * 0.9
       else: 
-          return self.precio
+          return 0
 
-    def cotizar(self):
-        descuento = self.calculadoraDescuento
-        precio_descuento = self.__precio * (1 - descuento)
-        return precio_descuento
+
 
 
     #tecnologias(marca:str,voltaje:int,precio:float,eficiencia:str)
-    def imprimirCaracteristicas(self):
-        print("Marca: ", self.__marca)
-        print("voltaje: ", self.__voltaje)
-        print("Eficiencia: ", self.__eficiencia)
-        print("Precio: ", self.__precio) 
+   # def imprimirCaracteristicas(self):
+   #     print("Marca: ", self.__marca)
+   #     print("voltaje: ", self.__voltaje)
+   #     print("Eficiencia: ", self.__eficiencia)
+   #     print("Precio: ", self.__precio) 
                
 
     def __str__(self):
-        imp = f"Voltaje: {self.__voltaje}"
-        imp += f"\nPrecio: {self.__precio}"
+        imp = f"\nMarca: {self.__marca}"
+        imp += f"Voltaje: {self.__voltaje}"
         imp += f"\nEficiencia: {self.__eficiencia}"
-        imp += f"\nMarca: {self.__marca}"
-        imp += f"\nCotizar: {self.cotizar}"
+        imp += f"\nPrecio: {self.__precio}"
         return imp

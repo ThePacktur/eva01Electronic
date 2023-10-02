@@ -2,7 +2,7 @@ from Transporte import Transporte
 
 
 class Bicicleta(Transporte):
-    def __init__(self, costeDespacho_base: int, aro: float, peso: float, precio: float, marca: str):
+    def __init__(self, costeDespacho_base: 400, aro: float, peso: float, precio: float, marca: str):
         super().__init__(costeDespacho_base)
         self.__aro = aro
         self.__peso = peso
@@ -34,17 +34,20 @@ class Bicicleta(Transporte):
         return self.__marca
     # crear calculadora de despacho en float.
 
-    def calcularDespacho(self):
-        precio_despocho = super().get_costeDespacho_base()
-        peso_total += precio_despocho + self.precio * 400
-        return peso_total
-
-    def cotizar(self):
-        return self.calcularDespacho
+    def calcular_precio_total(self):
+        descuento_eficiencia = super().get_costeDespacho_base() * self.__precio  
+        costo_despacho = 4000 + self.__peso * 400
+        precio_total = self.__precio - descuento_eficiencia + costo_despacho
+        return precio_total
 
     def __str__(self):
-        imp = super().__str__()
-        imp += f"\naro: {self.__aro}"
-        imp += f"\npeso: {self.__peso}"
-        imp += f"\nmarca: {self.__marca}"
+        descuento = super().get_costeDespacho_base() * 100
+        costo_despacho = 4000 + self.__peso * 400
+        precio_total = self.calcular_precio_total
+        imp =  f"\nTipo de bicicleta: {super().__str__()}"
+        imp += f"\nAro: {self.__aro}"
+        imp += f"\nPeso: {self.__peso}"
+        imp += f"\nDescuento eficiencia: {descuento}"
+        imp += f"\nCosto total de despacho: {costo_despacho} "
+        imp += f"\nPrecio total: {precio_total}"
         return imp

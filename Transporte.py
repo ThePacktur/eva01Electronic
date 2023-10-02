@@ -9,6 +9,7 @@ class Transporte:
         return self.__costeDespacho_base
     
     
+    
     def __str__(self):
         imp = f"\ncoste base del despacho: {self.__costeDespacho_base}" 
         return imp
